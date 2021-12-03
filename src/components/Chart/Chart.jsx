@@ -45,7 +45,7 @@ const Chart = ({data : {confirmed, recovered,deaths }, country}) => {
         
     );
 
-    console.log(confirmed,recovered,deaths);
+    // console.log(confirmed,recovered,deaths);
 
     const barChart = (
         confirmed 
@@ -65,8 +65,10 @@ const Chart = ({data : {confirmed, recovered,deaths }, country}) => {
                     ]
                 }}
                 options={{
-                    legend: { display: false },
-                    title: { display: true, text: `Current state in ${country}` },
+                    plugins:{
+                        legend: { display:false },
+                        title: { display:true, text:`Current Covid status in ${country}`},
+                    }
                 }}
             />
         ): null

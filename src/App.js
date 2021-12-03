@@ -21,12 +21,14 @@ const App = ({handleCountryChange}) => {
 
       setData(fetchedData);
 
+
   }
 
   handleCountryChange = async (country) =>{
     const fetchedData = await fetchData(country)
     setData(fetchedData,country)
     setCountry(country);
+
   }
 
   return (
